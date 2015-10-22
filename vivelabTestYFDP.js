@@ -85,5 +85,6 @@ function addOneValueToQuality(qualityValue) {
 }
 
 function subtractValueToQuality(itemName, qualityValue) {
-    return (isSulfuraItem(itemName))? qualityValue : (isConjuredItem(itemName))? qualityValue - 2 : qualityValue - 1;
+	var speedByDay = 1;
+    return (isSulfuraItem(itemName))? qualityValue : (isConjuredItem(itemName))? qualityValue - (speedByDay*2) : qualityValue - speedByDay;
 }
